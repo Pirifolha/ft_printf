@@ -6,11 +6,13 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/11 18:28:36 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/11 18:51:41 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
+
 int ft_printf(const char *, ...)
 {
-    
+    va_list args;
 }
