@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:31:39 by miguelsousa       #+#    #+#             */
-/*   Updated: 2025/11/11 18:17:04 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/12 18:18:58 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*result;
 
 	i = 0;
-	if (!s)
-		return (0);
+	if (!s || !f)
+		return (NULL);
 	result = malloc(ft_strlen(s) * sizeof(char) + 1);
 	if (!result)
 		return (0);
@@ -31,9 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-
-int main ()
-{
-	
-}
-

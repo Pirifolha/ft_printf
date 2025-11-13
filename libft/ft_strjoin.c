@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 11:08:02 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/11 18:02:46 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/12 18:12:42 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (result);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char *s2;
 	char *result;
@@ -71,4 +71,4 @@ int	main(void)
 
 	printf("%s\n", result);
 	free(result);
-}
+} */

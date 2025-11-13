@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miguelsousa <miguelsousa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 12:13:02 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/06 20:46:09 by miguelsousa      ###   ########.fr       */
+/*   Updated: 2025/11/12 18:19:21 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	slen = ft_strlen(s);
 	if (!s)
-		return (0);
+		return (NULL);
 	if (start >= slen)
 		len = 0;
 	if (len > slen - start)

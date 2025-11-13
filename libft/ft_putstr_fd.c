@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:09:12 by miguelsousa       #+#    #+#             */
-/*   Updated: 2025/11/11 17:44:57 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/12 18:19:16 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return ((void)0);
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
@@ -26,7 +26,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int	main(void)
+/* int	main(void)
 {
 	ft_putstr_fd(NULL, 2);
-}
+} */
