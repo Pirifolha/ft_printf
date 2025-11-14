@@ -6,11 +6,11 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:54:16 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/13 19:17:01 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/14 17:03:16 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {
@@ -34,8 +34,8 @@ int	ft_putstr(char *s)
 }
 int	ft_putnbr(int nb)
 {
-	char c;
-	int count;
+	char	c;
+	int		count;
 
 	count = 0;
 	if (nb == -2147483648)

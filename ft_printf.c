@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/13 19:17:22 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/14 19:33:36 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ int	ft_printconv(va_list args, const char c)
 		count += ft_putchar('%');
 	else if (c == 's')
 		count += ft_putstr(va_arg(args, char *));
-	else if (c == 'd')
+	else if (c == 'd' || c == 'i')
 		count += ft_putnbr(va_arg(args, int));
+	else if (c == 'p')
+		count += ft_putstr(va_arg(args, void *));
+	/* else if (c == 'h')
+		count += ft_put */
 	return (count);
 }
 
@@ -41,12 +45,12 @@ int	ft_printf(const char *s, ...)
 	{
 		while (s[i] == '%')
 		{
-			count += ft_printconv(args, s[i + 1]);
-            i++;
-            i++;
+			i++;
+			count += ft_printconv(args, s[i]);
+			i++;
 		}
 		if (s[i] != '\0')
-			count = ft_putchar(s[i++]);
+			count += ft_putchar(s[i++]);
 	}
 	va_end(args);
 	return (count);
@@ -56,6 +60,11 @@ int	main(void)
 {
 	/* printf("hello my name is %s%s and im %d years old%c\n", 33, "sousa", 24,
 		'!'); */
-	int count = ft_printf("hello %%%% %s%s%d%c\n", "miguel", "sousa", 24, '!');
+	char *str;
+	char c;
+
+	str = &c;
+	int count = ft_printf("hello %%%% %s%s%i%c\n", "miguel", "sousa", 24, '!');
 	ft_printf("%d\n", count);
+	ft_printf("%p\n", str);
 }
