@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_csd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miguelsousa <miguelsousa@student.42.fr>    +#+  +:+       +#+        */
+/*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:54:16 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/17 20:35:09 by miguelsousa      ###   ########.fr       */
+/*   Updated: 2025/11/19 20:14:34 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,17 @@ int	ft_putnbr(long nb)
 		count += ft_putchar('-');
 		nb = -nb;
 	}
+	if (nb > 9)
+		count += ft_putnbr(nb / 10);
+	count += ft_putchar((nb % 10) + '0');
+	return (count);
+}
+
+int	ft_putnbr_uns(unsigned int nb)
+{
+	int count;
+
+	count = 0;
 	if (nb > 9)
 		count += ft_putnbr(nb / 10);
 	count += ft_putchar((nb % 10) + '0');
