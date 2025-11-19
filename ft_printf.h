@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: miguelsousa <miguelsousa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:10:20 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/14 17:08:53 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/17 20:32:31 by miguelsousa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef PRINTF_H
+# define PRINTF_H
 
 # include "libft/libft.h"
 # include <ctype.h>
@@ -26,7 +26,7 @@
 
 int		ft_putchar(int c);
 int		ft_putstr(char *s);
-int		ft_putnbr(int nb);
+int		ft_putnbr(long nb);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);

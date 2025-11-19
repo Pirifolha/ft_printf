@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: miguelsousa <miguelsousa@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/14 19:33:36 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/17 20:32:06 by miguelsousa      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,7 @@ int	main(void)
 {
 	/* printf("hello my name is %s%s and im %d years old%c\n", 33, "sousa", 24,
 		'!'); */
-	char *str;
-	char c;
 
-	str = &c;
 	int count = ft_printf("hello %%%% %s%s%i%c\n", "miguel", "sousa", 24, '!');
 	ft_printf("%d\n", count);
-	ft_printf("%p\n", str);
 }
