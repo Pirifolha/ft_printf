@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:54:16 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 20:14:34 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/19 21:40:31 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	ft_putstr(char *s)
 	}
 	return (i);
 }
+
 int	ft_putnbr(long nb)
 {
 	int	count;
@@ -50,7 +51,7 @@ int	ft_putnbr(long nb)
 
 int	ft_putnbr_uns(unsigned int nb)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (nb > 9)
@@ -58,4 +59,3 @@ int	ft_putnbr_uns(unsigned int nb)
 	count += ft_putchar((nb % 10) + '0');
 	return (count);
 }
-

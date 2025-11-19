@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 21:07:02 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/19 22:00:38 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_printconv(va_list args, const char c)
 	else if (c == 'u')
 		count += ft_putnbr_uns(va_arg(args, unsigned int));
 	else if (c == 'x')
-		count += ft_putnbr_x(va_arg(args, int));
+		count += ft_putnbr_lowhex(va_arg(args, int));
 	else if (c == 'X')
-		count += ft_putnbr_X(va_arg(args, int));
+		count += ft_putnbr_uphex(va_arg(args, int));
 	else if (c == '%')
 		count += ft_putchar('%');
 	return (count);
@@ -64,10 +64,6 @@ int	main(void)
 {
 	int count;
 
-	count = ft_printf("%p\n", &count);
-	ft_printf("%d\n", count);
-
-	/* int count = ft_printf("hello %%%% %s%s%i%c\n", "miguel", "sousa", 0,
-			'!');
-	ft_printf("%d\n", count); */
+	count = ft_printf("%c %i %p\n", '2', 2, &count);
+	printf("%d\n", count);
 }
