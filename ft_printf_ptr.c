@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 20:04:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 21:41:27 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/19 22:40:52 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_putptr(void *ptr)
 	int	count;
 
 	count = 0;
+	if(!ptr)
+		write(1, "(nil)", 5);
 	count += ft_putstr("0x");
 	count += ft_putnbr_lowhex((long)ptr);
 	return (count);

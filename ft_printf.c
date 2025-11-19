@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 22:00:38 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/19 22:37:45 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int	ft_printf(const char *s, ...)
 	return (count);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	int count;
 
 	count = ft_printf("%c %i %p\n", '2', 2, &count);
 	printf("%d\n", count);
-}
+} */

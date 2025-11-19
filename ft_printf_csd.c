@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 18:54:16 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 21:40:31 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/19 22:39:24 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	ft_putstr(char *s)
 
 	i = 0;
 	if (!s)
+	{
+		write(1, "(null)", 6);
 		return (i);
+	}
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
