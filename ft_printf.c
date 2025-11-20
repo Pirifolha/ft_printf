@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 22:37:45 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/20 17:32:50 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,13 @@ int	ft_printconv(va_list args, const char c)
 	else if (c == 'u')
 		count += ft_putnbr_uns(va_arg(args, unsigned int));
 	else if (c == 'x')
-		count += ft_putnbr_lowhex(va_arg(args, int));
+		count += ft_putnbr_lowhex(va_arg(args, unsigned long));
 	else if (c == 'X')
-		count += ft_putnbr_uphex(va_arg(args, int));
+		count += ft_putnbr_uphex(va_arg(args, unsigned long));
 	else if (c == '%')
 		count += ft_putchar('%');
+	else
+		count = -1;
 	return (count);
 }
 
@@ -56,6 +58,8 @@ int	ft_printf(const char *s, ...)
 		if (s[i] != '\0')
 			count += ft_putchar(s[i++]);
 	}
+	if (count < 0)
+		return (-1);
 	va_end(args);
 	return (count);
 }
@@ -64,6 +68,9 @@ int	ft_printf(const char *s, ...)
 {
 	int count;
 
-	count = ft_printf("%c %i %p\n", '2', 2, &count);
+
+	count = printf("% % % % %");
 	printf("%d\n", count);
+
+	count = ft_printf("%x", 3735929054u);
 } */

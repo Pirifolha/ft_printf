@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 19:10:20 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/19 21:40:04 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/20 17:32:33 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	ft_putchar(int c);
 int	ft_putstr(char *s);
 int	ft_putnbr(long nb);
 int	ft_putnbr_uns(unsigned int nb);
-int	ft_putnbr_lowhex(long nb);
-int	ft_putnbr_uphex(long nb);
+int	ft_putnbr_lowhex(unsigned long nb);
+int	ft_putnbr_uphex(unsigned long nb);
 int	ft_putptr(void *ptr);
 
 #endif
