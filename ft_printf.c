@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/20 17:32:50 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/21 17:23:40 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_printconv(va_list args, const char c)
 	else if (c == 'u')
 		count += ft_putnbr_uns(va_arg(args, unsigned int));
 	else if (c == 'x')
-		count += ft_putnbr_lowhex(va_arg(args, unsigned long));
+		count += ft_putnbr_lowhex(va_arg(args, unsigned int));
 	else if (c == 'X')
-		count += ft_putnbr_uphex(va_arg(args, unsigned long));
+		count += ft_putnbr_uphex(va_arg(args, unsigned int));
 	else if (c == '%')
 		count += ft_putchar('%');
 	else
@@ -69,8 +69,9 @@ int	ft_printf(const char *s, ...)
 	int count;
 
 
-	count = printf("% % % % %");
-	printf("%d\n", count);
+	// count = printf("% % % % %");
+	
 
-	count = ft_printf("%x", 3735929054u);
+	count = ft_printf(" %x ", LONG_MAX);
+	printf("%d\n", count);
 } */

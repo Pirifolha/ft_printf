@@ -6,13 +6,13 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:02:54 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/20 17:32:27 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/21 17:28:27 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_uphex(unsigned long nb)
+int	ft_putnbr_uphex(unsigned int nb)
 {
 	int		count;
 	char	*base;
@@ -25,7 +25,7 @@ int	ft_putnbr_uphex(unsigned long nb)
 	return (count);
 }
 
-int	ft_putnbr_lowhex(unsigned long nb)
+int	ft_putnbr_lowhex(unsigned int nb)
 {
 	int		count;
 	char	*base;
