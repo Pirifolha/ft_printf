@@ -6,7 +6,7 @@
 /*   By: misousa <misousa@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:24:58 by misousa           #+#    #+#             */
-/*   Updated: 2025/11/21 17:23:40 by misousa          ###   ########.fr       */
+/*   Updated: 2025/11/21 17:39:59 by misousa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_printf(const char *s, ...)
 	int count;
 
 
-	// count = printf("% % % % %");
+	count = printf("% % % % %");
 	
 
 	count = ft_printf(" %x ", LONG_MAX);
